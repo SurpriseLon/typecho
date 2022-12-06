@@ -143,7 +143,7 @@ function themeConfig($form)
 
     $UpLikes = new Checkbox('UpLikes',
         array('UpLikes' => '开启文章可点赞'),
-        null,
+        true,
         '文章点赞功能',
         '说明：开启后将在文章内页（文章结束后）添加点赞按钮');
     $UpLikes->setAttribute('class', 'ctx post');
@@ -151,7 +151,7 @@ function themeConfig($form)
 
     $Reward = new Checkbox('Reward',
         array('Reward' => '开启文章打赏功能'),
-        null,
+        true,
         '文章打赏',
         '说明：开启后将在文章内页（文章结束后）添加打赏按钮<br />
         注意：开启后按需配置以下<font style="color:#20bf6b">绿色</font>选项'
@@ -314,7 +314,7 @@ function themeConfig($form)
     $GlobalFont = new Checkbox(
         'GlobalFont',
         array('GlobalFont' => '是否启用全局字体渲染优化'),
-        null,
+        true,
         '全局字体设置',
         '说明：开启后部分字体渲染为思源宋体，全局字体渲染为MiSans。均为按需加载方式，能在不影响速度的情况下对网站字体显示进一步提升');
     $GlobalFont->setAttribute('class', 'ctx global');
@@ -386,7 +386,7 @@ function themeConfig($form)
     $Smooth = new Checkbox(
         'Smooth',
         array('Smooth' => '是否启用平滑滚动'),
-        null, '平滑滚动',
+        true, '平滑滚动',
         '说明：开启后比较直观的改变就是整个网站滚动会舒服很多，在一定程度上会提高用户体验<br />
         注意：在低版本Edge浏览器、国产非Chrome内核浏览器，可能会出现卡顿，反而降低用户体验，请酌情开启');
     $Smooth->setAttribute('class', 'ctx enhancement');
@@ -395,7 +395,7 @@ function themeConfig($form)
     $Pjax = new Checkbox(
         'Pjax',
         array('Pjax' => '是否启用Pjax无刷新'),
-        null, 'Pjax无刷新',
+        true, 'Pjax无刷新',
         '说明：开启后比较直观的改变就是整个网站变成单页应用，在一定程度上会提高用户体验，且已经加载过的静态资源不会再重复加载，站点的响应速度会有进一步的改善<br />
         注意：可能会<font color="red">导致部分第三方插件失效</font>，请自行添加回调函数');
     $Pjax->setAttribute('class', 'ctx enhancement');
@@ -404,7 +404,7 @@ function themeConfig($form)
     $MathJax = new Checkbox(
         'MathJax',
         array('MathJax' => '是否启用LaTeX公式渲染'),
-        null, '公式渲染',
+        true, '公式渲染',
         '说明：开启后在文章页内引入MathJax，渲染LaTeX公式<br />
         注意：只支持LaTeX公式，可能会导致页面渲染速度下降（大小约1MB），酌情开启');
     $MathJax->setAttribute('class', 'ctx enhancement');
